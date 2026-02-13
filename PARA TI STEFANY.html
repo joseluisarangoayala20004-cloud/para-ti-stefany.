@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 700px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+      animation: aparecer 1.5s ease;
+    }
+
+    h1 {
+      color: #e11d48;
+      font-size: 2.3rem;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: latido 1s infinite alternate;
+      margin: 10px 0;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background: #e11d48;
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 8px;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      background: #be123c;
+    }
+
+    .mensaje {
+      display: none;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #be123c;
+      font-size: 1.2rem;
+    }
+
+    @keyframes latido {
+      from { transform: scale(1); }
+      to { transform: scale(1.25); }
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Para ti, MARCAS BARRETO STEFANY💝</h1>
+
+    <div class="heart">❤️</div>
+
+    <p>
+A veces el amor llega cuando el corazón todavía está aprendiendo a sanar.
+No te pido que confíes hoy, ni mañana, ni pronto.
+Solo quiero que sepas que aquí hay alguien que te mira con cariño,
+que entiende tus miedos, tus silencios y tus dudas.
+Tal vez nuestro amor sea imposible ahora…
+pero incluso los amores imposibles existen,
+porque nacen del respeto, de la paciencia
+y del deseo sincero de verte sonreír otra vez.
+
+No te culpo por no creer en el amor.
+Cuando te rompen el corazón, una parte de ti aprende a protegerse.
+Y está bien.
+Yo no vengo a prometerte cuentos ni finales perfectos.
+Solo vengo a decirte que lo que siento es real,
+aunque tú no estés lista para sentir lo mismo.
+Quizás este amor sea imposible,
+pero es honesto, es tranquilo
+y no quiere herirte… solo acompañarte.
+
+Me gustas cuando sonríes y también cuando te cierras al mundo.
+Me gustas incluso cuando dices que no crees en el amor,
+porque sé que no es falta de sentimientos,
+es exceso de heridas.
+Tal vez yo llegué tarde, cuando el daño ya estaba hecho.
+Tal vez este amor sea imposible,
+pero no por eso es menos verdadero.
+Si algún día decides volver a confiar,
+no quiero ser la promesa perfecta…
+solo alguien que no se vaya.
+    </p>
+
+    <!-- 🎵 Música -->
+    <audio id="musica" src="OV7-—-Te-Quiero-Tanto_-Tanto-_Letra_.mp3"></audio>
+    <button onclick="reproducir()">▶ Reproducir música</button>
+    <button onclick="pausar()">⏸ Pausar música</button>
+
+    <!-- 📸 Galería de fotos -->
+    <div class="galeria">
+      <img src="STEFANY.jpg" alt="Foto 1"> 
+      <img src="STEFANY1.jpg" alt="Foto 2"> 
+      <img src="STEFANY2.jpg" alt="Foto 3"> 
+      <img src="STEFANY3.jpeg" alt="Foto 4"> 
+    </div>
+
+    <button onclick="mostrarMensaje()">Toca aquí 💌</button>
+
+    <div class="mensaje" id="mensaje">
+      Te quiero… tanto, tanto, tantoooo 💖  
+      <br><br>
+      Con cariño, TU AMOR IMPOSIBLE JAJAJA YO JOSÉ
+    </div>
+  </div>
+
+  <script>
+    const musica = document.getElementById("musica");
+
+    function reproducir() {
+      musica.play();
+    }
+
+    function pausar() {
+      musica.pause();
+    }
+
+    function mostrarMensaje() {
+      document.getElementById("mensaje").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
